@@ -26,3 +26,47 @@ export const getPosts = async () => {
         }
     }
 }
+
+export const getPostsByTaller = async () => {
+    try {
+        return await apiClient.get('/posts/Taller')
+    } catch (error) {
+        return {
+            error: true,
+            e: error
+        }
+    }
+}
+
+export const getPostsByPractica = async () => {
+    try {
+        return await apiClient.get('/posts/Practica')
+    } catch (error) {
+        return {
+            error: true,
+            e: error
+        }
+    }
+}
+
+export const getPostsByTecnologia = async () => {
+    try {
+        return await apiClient.get('/posts/Tecnologia')
+    } catch (error) {
+        return {
+            error: true,
+            e: error
+        }
+    }
+}
+
+export const geCommentsByPost = async (id) => {
+    try {
+        return await apiClient.get(`/comments/${id}`)
+    } catch (error) {
+        return {
+            error: true,
+            e: error
+        }
+    }
+}
