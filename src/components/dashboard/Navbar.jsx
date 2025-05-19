@@ -14,7 +14,6 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 import DropDownMenu from './dropDownMenu'
-import { GoChevronLeft, GoChevronRight } from 'react-icons/go'
 import { FaGithub } from 'react-icons/fa'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { AiOutlineClose } from 'react-icons/ai'
@@ -61,7 +60,7 @@ export const Navbar = () => {
                 d={{ base: 'inherit', sm: 'none' }}
                 onClick={isOpen ? onClose : onOpen}
               />
-              <Link href="#">
+              <Link href="/dashboard">
                 <img
                   src="https://images.vexels.com/media/users/3/224240/isolated/preview/21e33e0bb58925b96b1a00c521c007f2-logotipo-de-soportes-de-programacion.png"
                   alt="Logo"

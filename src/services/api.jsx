@@ -60,9 +60,20 @@ export const getPostsByTecnologia = async () => {
     }
 }
 
-export const geCommentsByPost = async (id) => {
+export const getCommentsByPost = async (postId) => {
     try {
-        return await apiClient.get(`/comments/${id}`)
+        return await apiClient.get(`/comments/${postId}`)
+    } catch (error) {
+        return {
+            error: true,
+            e: error
+        }
+    }
+}
+
+export const addComment = async (data) => {
+    try {
+        return await apiClient.post('/comments', data)
     } catch (error) {
         return {
             error: true,
