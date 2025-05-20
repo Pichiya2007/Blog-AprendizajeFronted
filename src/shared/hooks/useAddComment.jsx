@@ -15,7 +15,7 @@ export const useAddComment = () => {
         setIsLoading(false)
         
         if (res.error) {
-        setError(res.e?.response?.data || "Error al agregar comentario")
+        setError(res.e?.response?.data || 'Error add comment')
         return null
         }
         return res.data

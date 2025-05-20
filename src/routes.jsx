@@ -4,9 +4,7 @@ import { CommentsPage } from './pages/comments'
 
 const routes = [
     { path: '/*', element: <DashboardPage /> },
-    { path: '/posts/taller', element: <PostsPage tipo="taller" /> },
-    { path: '/posts/practica', element: <PostsPage tipo="practica" /> },
-    { path: '/posts/tecnologia', element: <PostsPage tipo="tecnologia" /> },
+    { path: '/posts/course/:id', element: <PostsPage tipo="course" /> },
     { path: '/comments/:id', element: <CommentsPage/> },
 ]
 

@@ -1,5 +1,6 @@
-import { Stack, HStack, Link, Divider, Image, IconButton } from '@chakra-ui/react'
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { Stack, HStack, Link, Image, IconButton } from "@chakra-ui/react";
+import { Divider } from "@chakra-ui/layout";
+import { FaGithub } from 'react-icons/fa'
 
 const links = ['Blog', 'Documentation', 'Careers', 'Sign up', 'Terms of use', 'Privacy policy']
 const accounts = [

@@ -11,8 +11,8 @@ import {
   Text,
   IconButton,
   useDisclosure,
-  useColorModeValue
 } from '@chakra-ui/react'
+import { useColorModeValue } from '@chakra-ui/color-mode'
 import DropDownMenu from './dropDownMenu'
 import { FaGithub } from 'react-icons/fa'
 import { GiHamburgerMenu } from 'react-icons/gi'

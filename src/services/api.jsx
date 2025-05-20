@@ -27,31 +27,9 @@ export const getPosts = async () => {
     }
 }
 
-export const getPostsByTaller = async () => {
+export const getPostsByCourse = async (courseId) => {
     try {
-        return await apiClient.get('/posts/Taller')
-    } catch (error) {
-        return {
-            error: true,
-            e: error
-        }
-    }
-}
-
-export const getPostsByPractica = async () => {
-    try {
-        return await apiClient.get('/posts/Practica')
-    } catch (error) {
-        return {
-            error: true,
-            e: error
-        }
-    }
-}
-
-export const getPostsByTecnologia = async () => {
-    try {
-        return await apiClient.get('/posts/Tecnologia')
+        return await apiClient.get(`/posts/course/${courseId}`)
     } catch (error) {
         return {
             error: true,
@@ -74,6 +52,28 @@ export const getCommentsByPost = async (postId) => {
 export const addComment = async (data) => {
     try {
         return await apiClient.post('/comments', data)
+    } catch (error) {
+        return {
+            error: true,
+            e: error
+        }
+    }
+}
+
+export const updateComment = async (id, data) => {
+    try {
+        return await apiClient.put(`/comments/${id}`, data)
+    } catch (error) {
+        return {
+            error: true,
+            e: error
+        }
+    }
+}
+
+export const deleteComment = async (id) => {
+    try {
+        return await apiClient.delete(`/comments/${id}`)
     } catch (error) {
         return {
             error: true,

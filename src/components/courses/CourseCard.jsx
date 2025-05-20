@@ -58,12 +58,12 @@ export const CourseCard = () => {
                     {course.description}
                 </Text>
                 <Button
-                    as={RouterLink}
-                    to={courseLinks[idx]}
-                    colorScheme="teal"
-                    width="100%"
+                as={RouterLink}
+                to={`/posts/course/${course._id}`}
+                colorScheme="teal"
+                width="100%"
                 >
-                    Entrar al curso
+                Ver publicaciones
                 </Button>
                 </CardBody>
             </Card>
